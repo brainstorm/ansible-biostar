@@ -59,7 +59,7 @@ SESSION_COOKIE_NAME = "%s" % SITE_NAME
 ACCOUNT_EMAIL_SUBJECT_PREFIX = "[%s] " % SITE_NAME
 
 try:
-    ALLOWED_HOSTS.extend(['{{ ansible_ec2_public_ipv4 }}', '{{ ansible_ec2_public_hostname }}'])
+    ALLOWED_HOSTS.extend(['{{ public_ipv4 }}', '{{ public_hostname }}'])
 except ImproperlyConfigured:
     pass
 
@@ -74,7 +74,7 @@ START_CATEGORIES = [
 
 # These should be the most frequent (or special) tags on the site.
 NAVBAR_TAGS = [
-    "neuroinformatics", "fmri", "mri", "pipeline",
+    "neuroinformatics", "fmri", "mri", "eeg",
 ]
 
 # The last categories. These tags have special meaning internally.
