@@ -10,7 +10,8 @@
 - name: Provision the GCE instance with Docker
   hosts: biostarhosts
   gather_facts: False
-  user: root 
+  user: root
+  sudo: yes
 
   roles:
     - docker

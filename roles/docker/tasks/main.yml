@@ -5,6 +5,9 @@
     state: present
   sudo: True
 
+- name: Make sure httpS apt transport is installed on host machine (required for docker repos)
+  apt: name=apt-transport-https update_cache=no state=present
+
 - name: Add docker apt repo
   shell: echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
   sudo: True
