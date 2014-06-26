@@ -7,13 +7,12 @@
   roles:
     - gce_instance
 
-# TODO: test this!
-# - name: Provision the GCE instance with Docker
-#   hosts: biostarhosts
-#   gather_facts: False
-#   user: ubuntu
+- name: Provision the GCE instance with Docker
+  hosts: biostarhosts
+  gather_facts: False
+  user: root 
 
-#   roles:
-#     - docker
+  roles:
+    - docker
 
-# - include: biostar.yml
+- include: biostar.yml

@@ -4,12 +4,13 @@
 
 ```
 ansible-galaxy install nimiq.biostar
+
 # Deploy to an Amazon EC2 instance:
 ansible-playbook aws.yml --extra-vars "aws_access_key=<YOUR_KEY> aws_secret_key=<YOUR_SECRET>"
-# Or deploy to a Google Compute Engine instance (**TODO** not working yet):
+
+# Or deploy to a Google Compute Engine instance:
 ansible-playbook gce.yml --extra-vars "gce_service_email=<SERVICE_ACCOUNT_EMAIL> gce_prj_name=<PRJ_NAME>"
 ```
-**TODO**: fix and test GCE.
 
 ## 2. Overview
 

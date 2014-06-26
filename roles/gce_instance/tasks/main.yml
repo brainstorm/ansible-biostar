@@ -22,8 +22,8 @@
   with_items: gce.instance_data
 
 - name: "Group newly created instances"
-  add_host: hostname={{ item.public_ip }} groupname=new_instances
+  add_host: hostname={{ item.public_ip }} groupname=biostarhosts
   with_items: gce.instance_data
 
 - name: "Add host public key to GCE instance"
-  local_action: shell gcutil --service_version="v1" --project={{ gce_prj_id }} ssh --zone={{ zone }} {{ site_name }}
+  local_action: shell gcutil --service_version="v1" --project={{ gce_prj_name }} ssh --zone={{ zone }} {{ site_name }}
